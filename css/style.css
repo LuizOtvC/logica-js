@@ -1,0 +1,87 @@
+/* ==========================================================================
+   1. VARIÁVEIS
+   ========================================================================== */
+   :root {
+    /* Paleta principal */
+    --cor-texto: #FFFFFF;
+    --cor-fundo: #2D4739;
+    --cor-destaque: #09814A;
+    --cor-detalhe: #BCB382;
+  
+    /* Auxiliares e Estados */
+    --cor-suave: #A6B07E;
+    --cor-gradiente-fim: #ACBFA4;
+    --cor-link: #C97064;
+    --cor-fundo-tabela: #68A357;
+    --cor-erro: #C62828;
+    --cor-foco: #09814A;
+    --cor-borda-separador: #FFDAB9;
+    --cor-branco: #FFFFFF;
+    --cor-sombra: rgba(0, 0, 0, 0.15);
+  }
+  /* ==========================================================================
+     5. ESTADOS E TEMAS
+     ========================================================================== */
+     body.tema-escuro {
+        --cor-fundo: #121212;
+        --cor-texto: #E0E0E0;
+        --cor-suave: #1E1E1E;
+        --cor-gradiente-fim: #2A2A2A;
+        --cor-fundo-tabela: #1B3B22;
+        --cor-detalhe: #444444;
+      }
+
+      .resultado,.ok,.alerta,.erro {
+                            padding: 1rem;
+                            border-radius: 8px;
+                            border-left: 6px solid var(--cor-texto);
+                            background: var(--cor-suave);
+                            white-space: preline;
+                            }
+                            .ok { border-color: #2E7D32; background: #E8F5E9; }
+                            .alerta { border-color: #F9A825; background: #FFF8E1; }
+                            .erro { border-color: #C62828; background: #FFEBEE; }
+
+                            body {
+                                background-color: var(--cor-fundo);
+                                color: var(--cor-texto);
+                            }
+                            input, select, textarea {
+                                width: 100%;
+                                padding: 10px;
+                                margin-bottom: 16px;
+                                border: 1px solid var(--cor-detalhe);
+                                border-radius: 4px;
+                              }
+                              
+                              input:focus, select:focus, textarea:focus {
+                                border: 2px solid var(--cor-link);
+                                outline: none;
+                              }
+                              
+                              .enviar input[type="submit"],
+                              .enviar button {
+                                background-color: var(--cor-destaque);
+                                color: var(--cor-branco);
+                                border: none;
+                                padding: 12px 24px;
+                                border-radius: 6px;
+                                cursor: pointer;
+                                transition: transform 0.2s, background-color 0.2s;
+                              }
+                              
+                              .enviar input[type="submit"]:hover,
+                              .enviar button:hover {
+                                background-color: var(--cor-fundo-tabela);
+                                color: var(--cor-branco);
+                              }
+                              
+                              .enviar input[type="submit"]:focus,
+                              .enviar button:focus {
+                                outline: 2px solid var(--cor-destaque);
+                              }
+                              
+                              .enviar input[type="submit"]:active,
+                              .enviar button:active {
+                                transform: scale(0.97);
+                              }
